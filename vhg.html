@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <style>
+        /* ===== CSS Styling ===== */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: background-color 0.5s ease;
+        }
+
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 25px 10px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #4500b5;
+        }
+
+        footer {
+            background-color: #eee;
+            padding: 10px;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HTML Content ===== -->
+    <header>
+        <h1>Welcome to My Website 🌸</h1>
+        <p>A simple site made using HTML, CSS, and JavaScript.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>About This Page</h2>
+            <p>This is a basic example to understand how HTML, CSS, and JS work together.</p>
+            <button id="colorBtn">Change Background Color</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Swati 💻</p>
+    </footer>
+
+    <script>
+        // ===== JavaScript Functionality =====
+        const button = document.getElementById('colorBtn');
+        const colors = ['#f5f5f5', '#e0f7fa', '#ffe0b2', '#f3e5f5', '#fff9c4', '#e1bee7'];
+
+        button.addEventListener('click', () => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
